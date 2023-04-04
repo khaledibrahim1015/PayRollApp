@@ -7,6 +7,8 @@ using PayCompute.Services;
 using System;
 using System.IO;
 using System.Linq;
+using System.Net;
+using System.Reflection;
 using System.Threading.Tasks;
 
 namespace PayCompute.Controllers
@@ -156,7 +158,7 @@ namespace PayCompute.Controllers
                 LastName = employee.LastName,
                 Gender = employee.Gender,
                 Email = employee.Email,
-                DOB = employee.DOB,sss
+                DOB = employee.DOB,
                 DateJoined = employee.DateJoined,
                 NationalInsuranceNo = employee.NationalInsuranceNo,
                 PaymentMethod = employee.PaymentMethod,
@@ -179,9 +181,167 @@ namespace PayCompute.Controllers
 
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+
+        public async Task<IActionResult> Edit(EmployeeEditViewModel employeeEditViewModel)
+        {
+            if(ModelState.IsValid)
+            {
+                var employee = _employeeService.GetById(employeeEditViewModel.Id);
+
+                if (employee == null)
+                {
+                    return NotFound();
+
+                }
+                    
+                else
+                {
+                    employee.Id = employeeEditViewModel.Id;
+                    employee.EmployeeNo = employeeEditViewModel.EmployeeNo;
+                    employee.FirstName = employeeEditViewModel.FirstName;
+                    employee.MiddleName = employeeEditViewModel.MiddleName;
+                    employee.LastName = employeeEditViewModel.LastName;
+                    employee.Gender = employeeEditViewModel.Gender;
+                    employee.Email = employeeEditViewModel.Email;
+                    employee.DOB = employeeEditViewModel.DOB;
+                    employee.DateJoined = employeeEditViewModel.DateJoined;
+                    employee.NationalInsuranceNo = employeeEditViewModel.NationalInsuranceNo;
+                    employee.PaymentMethod = employeeEditViewModel.PaymentMethod;
+                    employee.UnionMember = employeeEditViewModel.UnionMember;
+                    employee.StudentLoan = employeeEditViewModel.StudentLoan;
+                    employee.Address = employeeEditViewModel.Address;
+                    employee.City = employeeEditViewModel.City;
+                    employee.PhoneNumber = employeeEditViewModel.PhoneNumber;
+                    employee.PostCode = employeeEditViewModel.PostCode;
+                    employee.Designation = employeeEditViewModel.Designation;
+
+                    // Image 
+
+                    if (employeeEditViewModel.ImageUrl != null && employeeEditViewModel.ImageUrl.Length > 0)
+                    {
+                        var webRootPath = _webHostEnvironment.WebRootPath;
+
+                        var uploadDirectory = WebConstant.uploadDirectory;
+
+                        var fileName = Path.GetFileNameWithoutExtension(employeeEditViewModel.ImageUrl.FileName);
+
+                        var Extension = Path.GetExtension(employeeEditViewModel.ImageUrl.FileName);
+
+                        fileName = DateTime.UtcNow.ToString("yymmssfff") + fileName + Extension;
+
+                        var path = Path.Combine(webRootPath, uploadDirectory, fileName);
+
+                        // Before create on server => Delete old file 
+                        var oldFile = Path.Combine(webRootPath, employee.ImageUrl);
+
+                        if (System.IO.File.Exists(oldFile))
+                        {
+
+                            System.IO.File.Delete(oldFile);
+                        }
+
+                      await  employeeEditViewModel.ImageUrl.CopyToAsync(new FileStream(path, FileMode.Create));
+
+                        // update 
+                        employee.ImageUrl = employee.ImageUrl = "/" + uploadDirectory + "/" + fileName;
+
+
+                    }
+
+
+                  await  _employeeService.UpdateAsync(employee);
+
+
+                }
+            }
+            return View(employeeEditViewModel);
+        }
 
 
 
+        [HttpGet]
+        public IActionResult Details(int? id )
+        {
+            if (id == null || id == 0)
+                return NotFound();
+
+            var employee = _employeeService.GetById(id);
+
+            if (employee == null)
+                return NotFound();
+
+            EmployeeDetailsViewModel model = new EmployeeDetailsViewModel()
+            {
+                Id=employee.Id,
+                EmployeeNo=employee.EmployeeNo,
+                FullName=employee.FullName,
+                Gender=employee.Gender,
+                DOB=employee.DOB,
+                DateJoined=employee.DateJoined,
+                PhoneNumber=employee.PhoneNumber,
+                Designation=employee.Designation,
+                Email=employee.Email,
+                NationalInsuranceNo=employee.NationalInsuranceNo,
+                Address=employee.Address,
+                City=employee.City,
+                PostCode=employee.PostCode,
+                PaymentMethod=employee.PaymentMethod,
+                StudentLoan=employee.StudentLoan,
+                UnionMember=employee.UnionMember,
+                ImageUrl=employee.ImageUrl
+
+            };
+
+            return View(model);
+        }
+
+
+        [HttpGet]
+        public IActionResult Delete(int? id )
+        {
+            if (id == null || id == 0)
+                return NotFound();
+
+            Employee employee = _employeeService.GetById(id);
+
+            if (employee == null)
+                return NotFound();
+
+            EmployeeDeleteViewModel model = new()
+            {
+                Id=employee.Id,
+                FullName=employee.FullName
+            };
+
+            return View(model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Delete(EmployeeDeleteViewModel model)
+        {
+            var employee = _employeeService.GetById(model.Id);
+
+            if (employee == null)
+                return NotFound();
+
+
+            string webRootPath = _webHostEnvironment.WebRootPath;
+            var path = webRootPath + employee.ImageUrl;
+
+            if(System.IO.File.Exists(path))
+            {
+                System.IO.File.Delete(path);
+            }
+
+            
+            await   _employeeService.DeleteAsync(employee.Id);
+            return RedirectToAction(nameof(Index));
+
+
+        }
 
 
 

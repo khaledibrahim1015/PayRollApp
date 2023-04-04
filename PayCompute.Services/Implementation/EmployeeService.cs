@@ -28,14 +28,14 @@ namespace PayCompute.Services.Implementation
 
 
 
-        public Employee GetById(int employeeId)
+        public Employee GetById(int? employeeId)
         => _context.Employees.Where(e => e.Id == employeeId).FirstOrDefault();
 
 
         public async Task DeleteAsync(int employeeId)
         {
             var employee = GetById(employeeId);
-             _context.Remove(employee);
+             _context.Employees.Remove(employee);
            await _context.SaveChangesAsync();
         }
 
@@ -50,7 +50,7 @@ namespace PayCompute.Services.Implementation
 
         public async Task UpdateAsync(Employee employee)
         {
-                  _context.Update(employee);
+                  _context.Employees.Update(employee);
           await  _context.SaveChangesAsync();
         }
 

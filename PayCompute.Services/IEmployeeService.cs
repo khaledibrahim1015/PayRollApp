@@ -19,7 +19,7 @@ namespace PayCompute.Services
 
         Task DeleteAsync(int employeeId);
 
-        Employee GetById(int employeeId);
+        Employee GetById(int? employeeId);
 
         IEnumerable<Employee> GetAll();
 
