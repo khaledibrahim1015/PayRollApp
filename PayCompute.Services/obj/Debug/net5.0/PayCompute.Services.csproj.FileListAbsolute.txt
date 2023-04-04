@@ -1,0 +1,17 @@
+C:\Users\Waheed\Desktop\project2\PayCompute.Services\obj\Debug\net5.0\PayCompute.Services.csproj.AssemblyReference.cache
+C:\Users\Waheed\Desktop\project2\PayCompute.Services\obj\Debug\net5.0\PayCompute.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Waheed\Desktop\project2\PayCompute.Services\obj\Debug\net5.0\PayCompute.Services.AssemblyInfoInputs.cache
+C:\Users\Waheed\Desktop\project2\PayCompute.Services\obj\Debug\net5.0\PayCompute.Services.AssemblyInfo.cs
+C:\Users\Waheed\Desktop\project2\PayCompute.Services\obj\Debug\net5.0\PayCompute.Services.csproj.CoreCompileInputs.cache
+C:\Users\Waheed\Desktop\project2\PayCompute.Services\bin\Debug\net5.0\PayCompute.Services.deps.json
+C:\Users\Waheed\Desktop\project2\PayCompute.Services\bin\Debug\net5.0\PayCompute.Services.dll
+C:\Users\Waheed\Desktop\project2\PayCompute.Services\bin\Debug\net5.0\PayCompute.Services.pdb
+C:\Users\Waheed\Desktop\project2\PayCompute.Services\bin\Debug\net5.0\PayCompute.Entity.dll
+C:\Users\Waheed\Desktop\project2\PayCompute.Services\bin\Debug\net5.0\PayCompute.Persistence.dll
+C:\Users\Waheed\Desktop\project2\PayCompute.Services\bin\Debug\net5.0\PayCompute.Entity.pdb
+C:\Users\Waheed\Desktop\project2\PayCompute.Services\bin\Debug\net5.0\PayCompute.Persistence.pdb
+C:\Users\Waheed\Desktop\project2\PayCompute.Services\obj\Debug\net5.0\PayCompute.Services.csproj.CopyComplete
+C:\Users\Waheed\Desktop\project2\PayCompute.Services\obj\Debug\net5.0\PayCompute.Services.dll
+C:\Users\Waheed\Desktop\project2\PayCompute.Services\obj\Debug\net5.0\refint\PayCompute.Services.dll
+C:\Users\Waheed\Desktop\project2\PayCompute.Services\obj\Debug\net5.0\PayCompute.Services.pdb
+C:\Users\Waheed\Desktop\project2\PayCompute.Services\obj\Debug\net5.0\ref\PayCompute.Services.dll
