@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Waheed\\Desktop\\project2\\PayCompute.Persistence\\PayCompute.Persistence.csproj": {}
+    "C:\\Users\\Waheed\\Desktop\\project2\\PayComputeApp\\PayCompute.Persistence\\PayCompute.Persistence.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Waheed\\Desktop\\project2\\PayCompute.Entity\\PayCompute.Entity.csproj": {
+    "C:\\Users\\Waheed\\Desktop\\project2\\PayComputeApp\\PayCompute.Entity\\PayCompute.Entity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Waheed\\Desktop\\project2\\PayCompute.Entity\\PayCompute.Entity.csproj",
+        "projectUniqueName": "C:\\Users\\Waheed\\Desktop\\project2\\PayComputeApp\\PayCompute.Entity\\PayCompute.Entity.csproj",
         "projectName": "PayCompute.Entity",
-        "projectPath": "C:\\Users\\Waheed\\Desktop\\project2\\PayCompute.Entity\\PayCompute.Entity.csproj",
+        "projectPath": "C:\\Users\\Waheed\\Desktop\\project2\\PayComputeApp\\PayCompute.Entity\\PayCompute.Entity.csproj",
         "packagesPath": "C:\\Users\\Waheed\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Waheed\\Desktop\\project2\\PayCompute.Entity\\obj\\",
+        "outputPath": "C:\\Users\\Waheed\\Desktop\\project2\\PayComputeApp\\PayCompute.Entity\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -63,14 +63,14 @@
         }
       }
     },
-    "C:\\Users\\Waheed\\Desktop\\project2\\PayCompute.Persistence\\PayCompute.Persistence.csproj": {
+    "C:\\Users\\Waheed\\Desktop\\project2\\PayComputeApp\\PayCompute.Persistence\\PayCompute.Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Waheed\\Desktop\\project2\\PayCompute.Persistence\\PayCompute.Persistence.csproj",
+        "projectUniqueName": "C:\\Users\\Waheed\\Desktop\\project2\\PayComputeApp\\PayCompute.Persistence\\PayCompute.Persistence.csproj",
         "projectName": "PayCompute.Persistence",
-        "projectPath": "C:\\Users\\Waheed\\Desktop\\project2\\PayCompute.Persistence\\PayCompute.Persistence.csproj",
+        "projectPath": "C:\\Users\\Waheed\\Desktop\\project2\\PayComputeApp\\PayCompute.Persistence\\PayCompute.Persistence.csproj",
         "packagesPath": "C:\\Users\\Waheed\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Waheed\\Desktop\\project2\\PayCompute.Persistence\\obj\\",
+        "outputPath": "C:\\Users\\Waheed\\Desktop\\project2\\PayComputeApp\\PayCompute.Persistence\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -91,8 +91,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Waheed\\Desktop\\project2\\PayCompute.Entity\\PayCompute.Entity.csproj": {
-                "projectPath": "C:\\Users\\Waheed\\Desktop\\project2\\PayCompute.Entity\\PayCompute.Entity.csproj"
+              "C:\\Users\\Waheed\\Desktop\\project2\\PayComputeApp\\PayCompute.Entity\\PayCompute.Entity.csproj": {
+                "projectPath": "C:\\Users\\Waheed\\Desktop\\project2\\PayComputeApp\\PayCompute.Entity\\PayCompute.Entity.csproj"
               }
             }
           }
