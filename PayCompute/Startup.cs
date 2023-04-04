@@ -11,6 +11,8 @@ using System.Threading.Tasks;
 using PayCompute.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
+using PayCompute.Services;
+using PayCompute.Services.Implementation;
 
 namespace PayCompute
 {
@@ -40,7 +42,8 @@ namespace PayCompute
 
 
 
-
+            // Register Services 
+            services.AddScoped<IEmployeeService, EmployeeService>();
 
         }
 
