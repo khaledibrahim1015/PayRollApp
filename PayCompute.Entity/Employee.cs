@@ -28,6 +28,8 @@ namespace PayCompute.Entity
         public string ImageUrl { get; set; }
         public DateTime DOB { get; set; }
         public DateTime DateJoined { get; set; }
+
+        public string PhoneNumber { set; get; }
         public string Designation { get; set; } // Employee JobRole
         public string Email { get; set; }
         [Required, MaxLength(50)]
