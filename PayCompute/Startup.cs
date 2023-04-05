@@ -40,7 +40,8 @@ namespace PayCompute
                  .AddDefaultUI()
                   .AddDefaultTokenProviders();
 
-
+            // Identity RazorPages
+            services.AddRazorPages();
 
             // Register Services 
             services.AddScoped<IEmployeeService, EmployeeService>();
@@ -69,6 +70,8 @@ namespace PayCompute
 
             app.UseEndpoints(endpoints =>
             {
+                // Identity RazorPages
+                endpoints.MapRazorPages();
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
