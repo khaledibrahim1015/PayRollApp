@@ -300,3 +300,7 @@ C:\Users\Waheed\Desktop\project2\PayComputeApp\PayCompute\obj\Debug\net5.0\Razor
 C:\Users\Waheed\Desktop\project2\PayComputeApp\PayCompute\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
 C:\Users\Waheed\Desktop\project2\PayComputeApp\PayCompute\obj\Debug\net5.0\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
 C:\Users\Waheed\Desktop\project2\PayComputeApp\PayCompute\obj\Debug\net5.0\Razor\Views\Employee\Index.cshtml.g.cs
+C:\Users\Waheed\Desktop\project2\PayComputeApp\PayCompute\obj\Debug\net5.0\Razor\Views\Employee\Create.cshtml.g.cs
+C:\Users\Waheed\Desktop\project2\PayComputeApp\PayCompute\obj\Debug\net5.0\Razor\Views\Employee\Edit.cshtml.g.cs
+C:\Users\Waheed\Desktop\project2\PayComputeApp\PayCompute\obj\Debug\net5.0\Razor\Views\Employee\Details.cshtml.g.cs
+C:\Users\Waheed\Desktop\project2\PayComputeApp\PayCompute\obj\Debug\net5.0\Razor\Views\Employee\Delete.cshtml.g.cs

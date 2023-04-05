@@ -36,7 +36,8 @@ namespace PayCompute.Controllers
                 Gender = employee.Gender,
                 DateJoined = employee.DateJoined,
                 Designation = employee.Designation,
-                City = employee.City
+                City = employee.City,
+                ImageUrl=employee.ImageUrl
             }).ToList();
 
             return View(employeeList);
@@ -45,13 +46,13 @@ namespace PayCompute.Controllers
         }
 
         [HttpGet]
-        [ValidateAntiForgeryToken] //  Prevent Cross-Site Request Forgery Attacks 
         public IActionResult Create()
         {
             EmployeeCreateViewModel employeeCreateViewModel = new EmployeeCreateViewModel();
             return View(employeeCreateViewModel);
         }
         [HttpPost]
+        [ValidateAntiForgeryToken] //  Prevent Cross-Site Request Forgery Attacks 
         public async Task<IActionResult> Create (EmployeeCreateViewModel employeeCreateViewModel)
         {
             
@@ -92,8 +93,8 @@ namespace PayCompute.Controllers
 
 
                     var webRootPath = _webHostEnvironment.WebRootPath;
-                    //var uploadDirectory = @"images/employee";
-                    var uploadDirectory = WebConstant.uploadDirectory;
+                    var uploadDirectory = @"images/employee";
+                    //var uploadDirectory = WebConstant.uploadDirectory;
 
                     var fileName = Path.GetFileNameWithoutExtension(employeeCreateViewModel.ImageUrl.FileName);
 
@@ -234,7 +235,7 @@ namespace PayCompute.Controllers
                         var path = Path.Combine(webRootPath, uploadDirectory, fileName);
 
                         // Before create on server => Delete old file 
-                        var oldFile = Path.Combine(webRootPath, employee.ImageUrl);
+                        var oldFile = webRootPath + employee.ImageUrl;
 
                         if (System.IO.File.Exists(oldFile))
                         {
@@ -245,13 +246,14 @@ namespace PayCompute.Controllers
                       await  employeeEditViewModel.ImageUrl.CopyToAsync(new FileStream(path, FileMode.Create));
 
                         // update 
-                        employee.ImageUrl = employee.ImageUrl = "/" + uploadDirectory + "/" + fileName;
+                        employee.ImageUrl = "/" + uploadDirectory + "/" + fileName;
 
 
                     }
 
 
                   await  _employeeService.UpdateAsync(employee);
+                    return RedirectToAction(nameof(Index));
 
 
                 }

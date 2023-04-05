@@ -19,7 +19,7 @@
 
               @*<a class="navbar-brand brand-logo"><img src="~/images/logo.png" alt="Logo" /> </a>*@
                 <a class="navbar-brand" asp-controller="Home" asp-action="Index" >
-                    <img src="~/images/logo.png" class="me-2" height="20"
+                    <img src="~/images/giphy.gif" class="me-2" height="20"
                          alt="MDB Logo" loading="lazy" />
                     <small class=" text-primary">PayRoll</small>
                 </a>
@@ -98,6 +98,8 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
