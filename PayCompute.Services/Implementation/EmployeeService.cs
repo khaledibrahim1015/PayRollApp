@@ -11,7 +11,8 @@ namespace PayCompute.Services.Implementation
     public class EmployeeService : IEmployeeService
     {
         private readonly ApplicationDbContext _context;
-        private object studentLoanAmount;
+        private decimal studentLoanAmount;
+        
 
         public EmployeeService(ApplicationDbContext context)
         {
@@ -94,7 +95,8 @@ namespace PayCompute.Services.Implementation
 
         public decimal UnionFees(int id)
         {
-            throw new NotImplementedException();
+            var employee = GetById(id);
+           return employee.UnionMember == UnionMember.Yes ? 10m : 0m;
         }
 
       

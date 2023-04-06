@@ -45,6 +45,9 @@ namespace PayCompute
 
             // Register Services 
             services.AddScoped<IEmployeeService, EmployeeService>();
+            services.AddScoped<IPayComputationService, PayComputationService>();
+            services.AddScoped<INatiomalInsuranceContributionService, NationalInsuranceContribution>();
+            services.AddScoped<ITaxService, TaxService>();
 
         }
 

@@ -18,6 +18,9 @@ namespace PayCompute.Services
 
         IEnumerable<SelectListItem> GetAllTaxYear();
 
+        //
+        TaxYear GetTaxYearById(int id);
+
         decimal OverTimeHours(decimal hoursWorked, decimal contractualHours);
 
         decimal ContractualEarnings(decimal contractualHours, decimal hoursWorked, decimal hourlyRate);

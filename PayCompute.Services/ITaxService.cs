@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace PayCompute.Services
 {
-    internal interface ITaxService
+    public interface ITaxService
     {
+        decimal TaxAmount(decimal totalAmount);
+
     }
 }
