@@ -52,7 +52,7 @@ namespace PayCompute.Services.Implementation
                     ((5000 - 3750) * 0.15m) + ((16666 - 5000) * 0.20m)+((33333-16666)* 0.225m) + ((totalAmount - 33333) * taxRate);
             }
 
-
+            return taxAmount;
 
         }
     }
