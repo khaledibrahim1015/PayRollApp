@@ -24,13 +24,6 @@ namespace PayCompute.Services
 
         IEnumerable<Employee> GetAll();
 
-
-
-        decimal UnionFees(int id); //  check for if employee if an unionmember  then if employee a unionMember will check to apply union fees
-
-        decimal StudentLoanRePaymentAmount(int id, decimal totalAmount);
-
-
         IEnumerable<SelectListItem> GetAllEmployeesForPayRoll();
 
 

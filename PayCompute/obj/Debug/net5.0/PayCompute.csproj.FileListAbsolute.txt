@@ -91,7 +91,6 @@ C:\Users\Waheed\Desktop\project2\PayCompute\bin\Debug\net5.0\Microsoft.AspNetCor
 C:\Users\Waheed\Desktop\project2\PayCompute\bin\Debug\net5.0\Microsoft.Extensions.FileProviders.Embedded.dll
 C:\Users\Waheed\Desktop\project2\PayCompute\obj\Debug\net5.0\PayCompute.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Waheed\Desktop\project2\PayCompute\obj\Debug\net5.0\staticwebassets\PayCompute.StaticWebAssets.xml
-C:\Users\Waheed\Desktop\project2\PayComputeApp\PayCompute\bin\Debug\net5.0\PayCompute.dll
 C:\Users\Waheed\Desktop\project2\PayComputeApp\PayCompute\bin\Debug\net5.0\appsettings.Development.json
 C:\Users\Waheed\Desktop\project2\PayComputeApp\PayCompute\bin\Debug\net5.0\appsettings.json
 C:\Users\Waheed\Desktop\project2\PayComputeApp\PayCompute\bin\Debug\net5.0\PayCompute.StaticWebAssets.xml
@@ -101,6 +100,7 @@ C:\Users\Waheed\Desktop\project2\PayComputeApp\PayCompute\bin\Debug\net5.0\wkHtm
 C:\Users\Waheed\Desktop\project2\PayComputeApp\PayCompute\bin\Debug\net5.0\PayCompute.deps.json
 C:\Users\Waheed\Desktop\project2\PayComputeApp\PayCompute\bin\Debug\net5.0\PayCompute.runtimeconfig.json
 C:\Users\Waheed\Desktop\project2\PayComputeApp\PayCompute\bin\Debug\net5.0\PayCompute.runtimeconfig.dev.json
+C:\Users\Waheed\Desktop\project2\PayComputeApp\PayCompute\bin\Debug\net5.0\PayCompute.dll
 C:\Users\Waheed\Desktop\project2\PayComputeApp\PayCompute\bin\Debug\net5.0\PayCompute.pdb
 C:\Users\Waheed\Desktop\project2\PayComputeApp\PayCompute\bin\Debug\net5.0\PayCompute.Views.dll
 C:\Users\Waheed\Desktop\project2\PayComputeApp\PayCompute\bin\Debug\net5.0\PayCompute.Views.pdb

@@ -52,11 +52,7 @@ namespace PayCompute.Models
     
         public decimal NIC { get; set; }// NATIONAL INSURANCE CONTRIBUATION
        
-        public decimal? UnionFee { get; set; } // hOur Deductions       //  Nullable => Optional
-
-     
-        public Nullable<decimal> SLC { get; set; } // student loan company    //  Nullable => Optional
-
+      
       
         public decimal TotalEarnings { get; set; }
       

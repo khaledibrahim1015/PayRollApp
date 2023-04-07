@@ -55,7 +55,7 @@ namespace PayCompute.Models
         public string PhoneNumber { set; get; }
 
 
-        [Required(ErrorMessage = "Job Role Is Required"), StringLength(100)]
+        [Required(ErrorMessage = "Job Role Is Required"), StringLength(100),Display(Name ="Role")]
         public string Designation { get; set; } // Employee JobRole
 
 
@@ -63,18 +63,13 @@ namespace PayCompute.Models
         public string Email { get; set; }
 
 
-        [Required(ErrorMessage = "National Insurance Number is Required"), StringLength(50), Display(Name = "NI NO.")]
+        [Required(ErrorMessage = "National Insurance Number is Required"), StringLength(50), Display(Name = "National Insurance NO.")]
         public string NationalInsuranceNo { get; set; } //  will put a regular expression for validate => must 296+birtofdate
 
 
         [Display(Name = "Payment Method")]
         public PaymentMethod PaymentMethod { get; set; }
 
-        [Display(Name = "Student Loan ")]
-        public StudentLoan StudentLoan { get; set; }
-
-        [Display(Name = "Union Member")]
-        public UnionMember UnionMember { set; get; }
 
 
 

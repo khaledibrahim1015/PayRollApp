@@ -37,8 +37,7 @@ namespace PayCompute.Entity
 
 
         public PaymentMethod PaymentMethod { get; set; }
-        public StudentLoan StudentLoan { get; set; }
-        public UnionMember UnionMember { set; get; } 
+  
 
 
 

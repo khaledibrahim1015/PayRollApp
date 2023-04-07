@@ -68,11 +68,11 @@ namespace PayCompute.Services.Implementation
 
         public decimal OverTimeHours(decimal hoursWorked, decimal contractualHours)
         {
-          if(hoursWorked<=contractualHours)
+          if(hoursWorked <= contractualHours)
             {
                 overTimeHours = 0.00m;
             }
-            else if(hoursWorked>contractualHours)
+            else if(hoursWorked > contractualHours)
             {
                 overTimeHours = hoursWorked - contractualHours;
             }
@@ -87,8 +87,8 @@ namespace PayCompute.Services.Implementation
 
 
 
-        public decimal TotalDeduction(decimal tax, decimal nic, decimal studentLoanRepayment, decimal unionFee)
-        => tax + nic + studentLoanRepayment + unionFee;
+        public decimal TotalDeduction(decimal tax, decimal nic)
+        => tax + nic ;
 
 
         public decimal TotalEarnings(decimal overTimeEarnings, decimal contractualEarnings)

@@ -20,9 +20,8 @@ namespace PayCompute.Controllers
         private decimal totalAmount;
         private decimal tax;
         private decimal nationalInsuranceContribution;
-        private decimal unionFee;
         private decimal totalDeductions;
-        private decimal studentLoan;
+
 
         private readonly IPayComputationService _payComputationService;
 
@@ -60,6 +59,9 @@ namespace PayCompute.Controllers
             return View(PayRecords);
         }
 
+
+
+
         [HttpGet]
         [Authorize(Roles ="Admin")]
         public IActionResult Create()
@@ -69,6 +71,9 @@ namespace PayCompute.Controllers
             var model = new PaymentRecordCreateViewModel();
             return View(model);
         }
+
+
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize(Roles = "Admin")]
@@ -97,14 +102,12 @@ namespace PayCompute.Controllers
 
                     Tax = tax = _taxService.TaxAmount(totalAmount),//multiple assignment expression
 
-                    UnionFee = unionFee = _employeeService.UnionFees(model.EmployeeId),
-
-                    SLC = studentLoan = _employeeService.StudentLoanRePaymentAmount(model.EmployeeId, totalAmount),
+                  
 
                     NIC = nationalInsuranceContribution = _natiomalInsuranceContributionService.NIContribution(totalAmount),//multiple assignment expression
 
 
-                    TotalDeduction = totalDeductions = _payComputationService.TotalDeduction(tax, nationalInsuranceContribution, studentLoan, unionFee),
+                    TotalDeduction = totalDeductions = _payComputationService.TotalDeduction(tax, nationalInsuranceContribution),
 
                     NetPayment = _payComputationService.NetPay(totalAmount, totalDeductions),
 
@@ -158,8 +161,7 @@ namespace PayCompute.Controllers
                 OverTimeEarnings = payrecord.OverTimeEarnings,
                 Tax = payrecord.Tax,
                 NIC = payrecord.NIC,
-                UnionFee = payrecord.UnionFee,
-                SLC = payrecord.SLC,
+           
                 TotalEarnings = payrecord.TotalEarnings,
                 TotalDeduction = payrecord.TotalDeduction,
                 NetPayment = payrecord.NetPayment
@@ -200,8 +202,7 @@ namespace PayCompute.Controllers
                 OverTimeEarnings = payrecord.OverTimeEarnings,
                 Tax = payrecord.Tax,
                 NIC = payrecord.NIC,
-                UnionFee = payrecord.UnionFee,
-                SLC = payrecord.SLC,
+            
                 TotalEarnings = payrecord.TotalEarnings,
                 TotalDeduction = payrecord.TotalDeduction,
                 NetPayment = payrecord.NetPayment
@@ -215,8 +216,6 @@ namespace PayCompute.Controllers
 
         public IActionResult GeneratePdf(int? id )
         {
-           
-
             var PayGeneratePdf = new ActionAsPdf("Payslip", new  { id = id })
             {
                 FileName ="Pay.Pdf"

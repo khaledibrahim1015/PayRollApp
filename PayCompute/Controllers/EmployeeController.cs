@@ -53,6 +53,7 @@ namespace PayCompute.Controllers
             EmployeeCreateViewModel employeeCreateViewModel = new EmployeeCreateViewModel();
             return View(employeeCreateViewModel);
         }
+
         [HttpPost]
         [ValidateAntiForgeryToken] //  Prevent Cross-Site Request Forgery Attacks 
         public async Task<IActionResult> Create (EmployeeCreateViewModel employeeCreateViewModel)
@@ -75,8 +76,7 @@ namespace PayCompute.Controllers
                     DateJoined = employeeCreateViewModel.DateJoined,
                     NationalInsuranceNo = employeeCreateViewModel.NationalInsuranceNo,
                     PaymentMethod = employeeCreateViewModel.PaymentMethod,
-                    UnionMember = employeeCreateViewModel.UnionMember,
-                    StudentLoan = employeeCreateViewModel.StudentLoan,
+   
                     Address = employeeCreateViewModel.Address,
                     City = employeeCreateViewModel.City,
                     PhoneNumber = employeeCreateViewModel.PhoneNumber,
@@ -165,8 +165,6 @@ namespace PayCompute.Controllers
                 DateJoined = employee.DateJoined,
                 NationalInsuranceNo = employee.NationalInsuranceNo,
                 PaymentMethod = employee.PaymentMethod,
-                UnionMember = employee.UnionMember,
-                StudentLoan = employee.StudentLoan,
                 Address = employee.Address,
                 City = employee.City,
                 PhoneNumber = employee.PhoneNumber,
@@ -212,8 +210,6 @@ namespace PayCompute.Controllers
                     employee.DateJoined = employeeEditViewModel.DateJoined;
                     employee.NationalInsuranceNo = employeeEditViewModel.NationalInsuranceNo;
                     employee.PaymentMethod = employeeEditViewModel.PaymentMethod;
-                    employee.UnionMember = employeeEditViewModel.UnionMember;
-                    employee.StudentLoan = employeeEditViewModel.StudentLoan;
                     employee.Address = employeeEditViewModel.Address;
                     employee.City = employeeEditViewModel.City;
                     employee.PhoneNumber = employeeEditViewModel.PhoneNumber;
@@ -292,8 +288,6 @@ namespace PayCompute.Controllers
                 City=employee.City,
                 PostCode=employee.PostCode,
                 PaymentMethod=employee.PaymentMethod,
-                StudentLoan=employee.StudentLoan,
-                UnionMember=employee.UnionMember,
                 ImageUrl=employee.ImageUrl
 
             };

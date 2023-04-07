@@ -56,11 +56,9 @@ namespace PayCompute.Entity
         public decimal Tax { get; set; }
         [Column(TypeName = "money")]
         public decimal NIC { get; set; }// NATIONAL INSURANCE CONTRIBUATION
-        [Column(TypeName = "money")]
-        public decimal? UnionFee { get; set; } // hOur Deductions       //  Nullable => Optional
 
-        [Column(TypeName = "money")]
-        public Nullable<decimal> SLC { get; set; } // student loan company    //  Nullable => Optional
+
+       
 
         [Column(TypeName = "money")]
         public decimal TotalEarnings { get; set; }

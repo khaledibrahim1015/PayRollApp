@@ -31,7 +31,7 @@ namespace PayCompute.Services
 
         decimal TotalEarnings(decimal overTimeEarnings,decimal contractualEarnings);
 
-        decimal TotalDeduction(decimal tax, decimal nic, decimal studentLoanRepayment, decimal unionFee);
+        decimal TotalDeduction(decimal tax, decimal nic);
 
         decimal NetPay(decimal totalEarnings, decimal totalDeduction);
 

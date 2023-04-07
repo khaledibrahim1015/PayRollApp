@@ -24,10 +24,7 @@ namespace PayCompute.Models
 
 
         public PaymentMethod PaymentMethod { get; set; }
-        public StudentLoan StudentLoan { get; set; }
-        public UnionMember UnionMember { set; get; }
-
-
+ 
 
         public string Address { get; set; }
         public string City { get; set; }

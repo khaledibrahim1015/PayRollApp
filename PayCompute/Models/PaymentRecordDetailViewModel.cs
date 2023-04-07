@@ -53,12 +53,9 @@ namespace PayCompute.Models
         public decimal Tax { get; set; }
 
         public decimal NIC { get; set; }// NATIONAL INSURANCE CONTRIBUATION
-        [Display(Name = "Union Fee")]
-        public decimal? UnionFee { get; set; } // hOur Deductions       //  Nullable => Optional
 
 
-        public Nullable<decimal> SLC { get; set; } // student loan company    //  Nullable => Optional
-
+    
         [Display(Name = "Total Earnings")]
         public decimal TotalEarnings { get; set; }
         [Display(Name = "Total Deduction")]
