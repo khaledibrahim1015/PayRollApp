@@ -5,12 +5,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Controllers\PayController.cs~RFbb5f3c4.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\PayCompute.Entity\PayCompute.Entity.csproj" />
     <ProjectReference Include="..\PayCompute.Services\PayCompute.Services.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Data\" />
     <Folder Include="wwwroot\images\employee\" />
   </ItemGroup>
 

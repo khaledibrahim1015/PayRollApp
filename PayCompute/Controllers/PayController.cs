@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using PayCompute.Entity;
 using PayCompute.Models;
@@ -10,6 +11,7 @@ using System.Threading.Tasks;
 
 namespace PayCompute.Controllers
 {
+    [Authorize(Roles = "Admin,Manager")]
     public class PayController : Controller
     {
         private decimal overTimeHours;
@@ -59,6 +61,7 @@ namespace PayCompute.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles ="Admin")]
         public IActionResult Create()
         {
             ViewBag.EmployeeList = _employeeService.GetAllEmployeesForPayRoll(); // DropDownList => map EmployeeId
@@ -68,6 +71,7 @@ namespace PayCompute.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Create(PaymentRecordCreateViewModel model)
         {
             if (ModelState.IsValid)
@@ -167,7 +171,7 @@ namespace PayCompute.Controllers
 
 
         [HttpGet]
-
+        [AllowAnonymous]
         public IActionResult Payslip(int? id)
         {
             if (id == null || id == 0)

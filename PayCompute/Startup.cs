@@ -52,7 +52,7 @@ namespace PayCompute
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env,UserManager<IdentityUser> userManager, RoleManager<IdentityRole> roleManager)
         {
             if (env.IsDevelopment())
             {
@@ -69,7 +69,10 @@ namespace PayCompute
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
+            //Seeding 
+            DataSeedingInitializer.UserAndRoleSeedAsync(userManager, roleManager).Wait();
 
             app.UseEndpoints(endpoints =>
             {
