@@ -292,6 +292,10 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[5.0.2, )"
+            },
+            "RotativaCore": {
+              "target": "Package",
+              "version": "[2.2.0, )"
             }
           },
           "imports": [

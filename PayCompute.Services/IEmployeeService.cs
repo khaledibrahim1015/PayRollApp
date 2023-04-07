@@ -1,4 +1,5 @@
-﻿using PayCompute.Entity;
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+using PayCompute.Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,6 +30,8 @@ namespace PayCompute.Services
 
         decimal StudentLoanRePaymentAmount(int id, decimal totalAmount);
 
+
+        IEnumerable<SelectListItem> GetAllEmployeesForPayRoll();
 
 
     }

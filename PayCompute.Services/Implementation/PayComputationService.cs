@@ -40,7 +40,7 @@ namespace PayCompute.Services.Implementation
             return allTaxYear;
         }
 
-        public PaymentRecord GetById(int id) => _context.PaymentRecords.Where(p => p.Id == id).SingleOrDefault();
+        public PaymentRecord GetById(int? id) => _context.PaymentRecords.Where(p => p.Id == id).SingleOrDefault();
        
 
 

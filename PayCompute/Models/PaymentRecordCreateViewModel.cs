@@ -37,7 +37,7 @@ namespace PayCompute.Models
         public string TaxCode { get; set; }
         [Display(Name = "Hourly Rate")]
         public decimal HourlyRate { get; set; }
-        [Display(Name = "Hourly Worked")]
+        [Display(Name = "Hours Worked")]
         public decimal HourlyWorked { get; set; }
         [Display(Name = "Contractual Hours")]
         public decimal ContractualHours { get; set; } = 160m;

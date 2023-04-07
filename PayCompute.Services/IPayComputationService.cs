@@ -12,7 +12,7 @@ namespace PayCompute.Services
     {
         Task CreatAsync(PaymentRecord paymentRecord);
 
-        PaymentRecord GetById(int id);
+        PaymentRecord GetById(int? id);
 
         IEnumerable<PaymentRecord> GetAll();
 
